@@ -193,7 +193,7 @@ Range = AS.init_Z + [fliplr(-Range) 0 Range];
 mmc.setPosition('PIZStage',AS.init_Z );
 
 % Get a spline function estimate of the points:
-AS.reffunction = fit(AS.Z_truth',AS.Sharpness_truth','spline');
+AS.reffunction = fit(AS.Z_truth',AS.Sharpness_truth','smoothingspline');
 
 % Show the sharpness curve
 fa = findobj('type','figure','name','autofocus');
